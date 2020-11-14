@@ -9,13 +9,13 @@ public class AlertDivByZero {
 
     public static void possibleDiv(int number) {
         if (number == 0) {
-            System.out.println(number + " Could not div by 0.");
+            System.out.println("Could not div by 0." + "entered number = " + number);
         }
         if (number < 0) {
-            System.out.println(number + " This is negative numbers");
+            System.out.println("This is negative numbers." + "entered number = " + number);
         }
         if (number > 0) {
-            System.out.println(number + " This is positive numbers");
+            System.out.println("This is positive numbers." + "entered number = " + number);
         }
     }
 }
