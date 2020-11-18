@@ -3,17 +3,17 @@ package ru.job4j.loop;
 public class Counter {
     public static int sum(int start, int finish) {
         int sum = 0;
-        int rsl = start;
-        for (sum = start; rsl <= finish; rsl++) {
-            sum = start + 1;
-            rsl = sum + rsl;
+        for (int i = start; i <= finish; i++) {
+            sum += i;
         }
-        return rsl;
+        return sum;
     }
 
     public static void main(String[] args) {
         System.out.println(sum(0, 10));
         System.out.println(sum(3, 8));
         System.out.println(sum(1, 1));
+        System.out.println(sum(10, 200));
+        System.out.println(sum(8, 11));
     }
 }
