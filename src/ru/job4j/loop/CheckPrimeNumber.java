@@ -1,16 +1,15 @@
 package ru.job4j.loop;
 
 public class CheckPrimeNumber {
+
     public static boolean check(int number) {
-        boolean prime = number > 1;
-        int count = 2;
-        while (count < number) {
-            if (number % count == 0) {
-                prime = false;
+        boolean checkResult = number > 1;
+        for (int i = 2; i < number; i++) {
+            if (number % 2 == 0) {
+                checkResult = false;
                 break;
             }
-            count += 1;
         }
-        return prime;
+        return checkResult;
     }
 }
