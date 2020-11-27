@@ -11,7 +11,7 @@ public class Machine {
         int size = 0;
         int surrender = money - price;
             for (int i = 0; i < coins.length; i++) {
-                while (surrender / coins[i] >= 1) {
+                while (surrender - coins[i] >= 0) {
                     surrender -= coins[i];
                     rsl[size] = coins[i];
                     size++;
