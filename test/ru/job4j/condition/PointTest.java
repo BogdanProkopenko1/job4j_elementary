@@ -2,46 +2,20 @@ package ru.job4j.condition;
 
 import org.junit.Assert;
 import org.junit.Test;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class PointTest {
     @Test
-    public void when00to20then2() {
-        int expected = 2;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+    public void when102030to100200300then336() {
+        Point first = new Point(10, 20, 30);
+        Point second = new Point(100, 200, 300);
+        Assert.assertEquals(first.distance3d(second), 336, 0.9);
     }
     @Test
-    public void when58to52Then6() {
-        int expected = 6;
-        int inX1 = 5;
-        int inY1 = 8;
-        int inX2 = 5;
-        int inY2 = 2;
-        double out = Point.distance(inX1, inY1, inX2, inY2);
-        Assert.assertEquals(expected, out, 0.01);
-    }
-    @Test
-    public void when48to61Then7() {
-        int expected = 7;
-        int inX1 = 6;
-        int inY1 = 8;
-        int inX2 = 6;
-        int inY2 = 1;
-        double out = Point.distance(inX1, inY1, inX2, inY2);
-        Assert.assertEquals(expected, out, 0.01);
-    }
-    @Test
-    public void when90to10Then70() {
-        int expected = 8;
-        int inX1 = 9;
-        int inY1 = 0;
-        int inX2 = 1;
-        int inY2 = 0;
-        double out = Point.distance(inX1, inY1, inX2, inY2);
-        Assert.assertEquals(expected, out, 0.01);
+    public void distance3d() {
+        Point first = new Point(5, 5, 5);
+        Point second = new Point(10, 10, 10);
+        Assert.assertEquals(first.distance3d(second),8, 0.9);
     }
 }
