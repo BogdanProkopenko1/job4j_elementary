@@ -6,6 +6,17 @@ public class Max {
         return rsl;
     }
 
+    public static int max(int first, int second, int third) {
+        second = max(first, second);
+        return max(third, second);
+    }
+
+    public static int max(int first, int second, int third, int fourth) {
+        return (max(first, second,
+                max(third, fourth)
+        ));
+    }
+
     public static void main(String[] args) {
         int result = Max.max(5, 8);
         System.out.println("max value = " + result);
