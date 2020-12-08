@@ -1,12 +1,27 @@
 package ru.job4j.oop;
 
 public class Programmer extends Engineer {
+
+    public Programmer(
+    String firstname,
+    String lastname,
+    String birthday,
+    String education,
+    String sphere) {
+        this.name = firstname;
+        this.surname = lastname;
+        this.birthday = birthday;
+        this.education = education;
+        this.technicalSphere = sphere;
+    }
+
     public static void main(String[] args) {
-        Programmer programmer = new Programmer();
-        programmer.getName("Sergey");
-        programmer.getSurname("Derevnin");
-        programmer.getBirthday("01.01.1995");
-        programmer.getEducation("Communication University in Moscow.");
-        programmer.getTechnicalSphere("Programming");
+        Programmer programmer = new Programmer(
+                "Sergey",
+                "Zotov",
+                "20.11.2001",
+                "Communication University in Moscow.",
+                "Programming"
+        );
     }
 }
