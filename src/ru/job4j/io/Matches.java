@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Matches {
 
     public static void main(String[] args) {
-        System.out.println("Game of eleven matches." + System.lineSeparator());
+        System.out.println("Game of eleven matches.");
         int sticks = 11;
         int counter = 0;
         Scanner in = new Scanner(System.in);
         String player1 = in.nextLine();
         String player2 = in.nextLine();
         while (sticks > 0) {
-            System.out.println("left is " + sticks);
+            System.out.println("left is " + sticks + System.lineSeparator());
             int select = Integer.valueOf(in.nextLine());
             if (counter % 2 == 0) {
                 System.out.println("Player " + player1 + " walked.");
@@ -31,6 +31,7 @@ public class Matches {
                 } else {
                     System.out.println("Player " + player2 + " is winner!");
                 }
+                break;
             }
         }
     }
