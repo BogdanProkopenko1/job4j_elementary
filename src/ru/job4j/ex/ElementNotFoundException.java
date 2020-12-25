@@ -7,7 +7,11 @@ public class ElementNotFoundException extends Exception {
         for (int i = 0; i < value.length; i++) {
             if (value[i].equals(key)) {
                 rsl = i;
+                break;
             }
+        }
+        if (rsl == -1) {
+            throw new ElementNotFoundException();
         }
         return rsl;
     }
@@ -16,6 +20,7 @@ public class ElementNotFoundException extends Exception {
         try {
             String[] words = {"Mouse", "Dog", "Cat"};
             indexOf(words, "PC");
+            System.out.println(indexOf(words, "efj"));
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
