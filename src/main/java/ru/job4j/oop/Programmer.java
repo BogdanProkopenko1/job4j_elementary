@@ -1,7 +1,10 @@
 package ru.job4j.oop;
 
 public class Programmer extends Engineer {
-
+    public Programmer(String name) {
+        super(name);
+    }
+/*
     public Programmer(
     String firstname,
     String lastname,
@@ -24,4 +27,6 @@ public class Programmer extends Engineer {
                 "Programming"
         );
     }
+
+ */
 }
