@@ -2,18 +2,12 @@ package ru.job4j.oop;
 
 public class Builder extends Engineer {
 
-    public Builder(String name, String surname, String birthday, String education, String sphere) {
-        super(name);
-      //  super(surname);
-    }
+    private String fourth;
 
-    public static void main(String[] args) {
-        Builder builder = new Builder(
-                "Pavel",
-                "Kovyazin",
-                "01.01.1985",
-                "University Constructions and Materials in Moscow.",
-                "Construction"
-        );
+    public Builder(
+            String name, String surname, String education, String birthday, String healthSphere, String fourth
+    ) {
+        super(name, surname, education, birthday, healthSphere);
+        this.fourth = fourth;
     }
 }

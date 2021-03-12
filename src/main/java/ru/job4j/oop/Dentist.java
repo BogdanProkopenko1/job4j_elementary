@@ -1,29 +1,13 @@
 package ru.job4j.oop;
 
 public class Dentist extends Doctor {
-/*
+
+    private String second;
+
     public Dentist(
-            String firstname,
-            String lastname,
-            String birthday,
-            String education,
-            String sphere) {
-        this.name = firstname;
-        this.surname = lastname;
-        this.birthday = birthday;
-        this.education = education;
-        this.healthSphere = sphere;
+            String name, String surname, String education, String birthday, String healthSphere, String second
+    ) {
+        super(name, surname, education, birthday, healthSphere);
+        this.second = second;
     }
-
-    public static void main(String[] args) {
-        Dentist dentist = new Dentist(
-                "Dmitry",
-                "Zotov",
-                "11.02.1895",
-                "Medical University in Saint-Petersburg. Surgeon-dentist.",
-                "Dentistry"
-        );
-    }
-
- */
 }
